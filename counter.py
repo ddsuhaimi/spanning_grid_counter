@@ -2,6 +2,7 @@ import numpy as np
 import scipy.sparse as scs
 
 def make_matrix(num_of_rows, num_of_cols):
+    # make adjacency matrix
     n = num_of_rows*num_of_cols
     M = np.zeros((n, n))
     for r in range(0, num_of_rows):
@@ -15,6 +16,8 @@ def make_matrix(num_of_rows, num_of_cols):
 
 def calc_num_spanning(num_of_rows, num_of_cols):
     A = make_matrix(num_of_rows, num_of_cols)
+    
+    # calculate any cofactor of its Laplacian graph (see Matrix Tree theorem)
     new_L = scs.csgraph.laplacian(A)[1:, 1:]
     result = int(np.round(np.linalg.det(new_L)))
     return result
