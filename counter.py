@@ -4,7 +4,7 @@ import scipy.sparse as scs
 
 def make_matrix(num_of_rows, num_of_cols):
     '''
-    this function construct and return the adjacency matrix of a grid graph
+    this function constructs and returns the adjacency matrix of a grid graph
     params:
         num_of_rows : how many rows does the grid graph has
         num_of_cols : how many columns does the grid graph
@@ -25,7 +25,7 @@ def make_matrix(num_of_rows, num_of_cols):
 
 def calc_num_spanning(num_of_rows, num_of_cols):
     '''
-    this function calculates the number of spanning tree using matrix tree theorem
+    this function calculates and returns the number of spanning tree using matrix tree theorem
     params :
         num_of_rows : how many rows does the grid graph has
         num_of_cols : how many columns does the grid graph
